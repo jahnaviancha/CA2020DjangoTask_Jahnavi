@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Learning_App import views
-urlpatterns = [
+
+
+urlpatterns=[
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', views.index, name='index'),
+    path('blog', views.blog,name='blog')
 ]
